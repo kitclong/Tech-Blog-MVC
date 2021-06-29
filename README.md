@@ -22,7 +22,7 @@ User can create/write a tech blog, post, publish, and comment with others.
 Install:
 * npm init
 * npm install
-* * make are installed: (bcrypt, dotenv, express, handlebars, mysql2, sequelize)
+make sure all are installed: (bcrypt, dotenv, express, handlebars, mysql2, sequelize)
 
 If running on local machine to test run:
 * mysql -u root -p
