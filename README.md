@@ -41,6 +41,7 @@ If running on local machine to test run:
 * create and use models
 * primary and foreign keys
 * dotenv file 
+* bcrypt
 
 ## Contacts/Deployed links:
 
