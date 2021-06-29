@@ -1,26 +1,23 @@
-<article>
-    <a href="/dashboard"> &larr; Back to dashboard</a>
-    <h2>
-        Update My Information
+<div class="text-center m-3">
+    <a class="btn btn-dark m-2" href="/dashboard"> &larr; Back</a>
+    <h2 class="mb-4">
+        Update My Info
     </h2>
     <form class="edit-user-form">
-        <div>
-            <label for="user-name">User Name</label>
+        <div class="mb-3">
             <input name="user-name" type="text" value="{{user.username}}" />
         </div>
-        <div>
-            <label for="email">User Email</label>
-            <input name="email" value="{{user.email}}" />
+        <div class="mb-3">
+            <input name="email" value="{{user.email}}" placeholder="Email:" />
         </div>
-        <div>
-            <label for="password">Password</label>
-            <input type="password" name="password" />
+        <div class="mb-3">
+            <input type="password" name="password" placeholder="Password:" />
         </div>
-        <div>
+        <div class="mb-3">
             <input type="hidden" id="user-id" name="user-id" value={{user.id}} />
         </div>
-        <button type="submit">Update</button>
+        <button class="btn btn-primary" type="submit">Update</button>
     </form>
-</article>
+</div>
 
 <script src="/js/edit-user.js"></script>
