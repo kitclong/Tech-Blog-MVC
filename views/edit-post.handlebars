@@ -1,0 +1,46 @@
+<div class="text-center mb-3">
+    <a class="btn btn-dark m-2" href="/dashboard"> &larr; Back</a>
+    <h2>
+        Edit Post
+    </h2>
+    <form class="edit-post-form">
+        <div class="mb-3">
+            <input name="post-title" type="text" value="{{post.title}}" style="height: 2em; width: 30em;" />
+        </div>
+        <div class="mb-3">
+            <textarea name="post-text" style="height: 10em; width: 35em;">{{post.post_text}}</textarea>
+        </div>
+        <div class="mb-3">
+            Posted on {{format_date post.created_at}}
+            |
+            <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
+        </div>
+        <button class="btn btn-info" type="submit">Save post</button>
+        <button class="btn btn-warning" type="button" class="delete-post-btn">Delete post</button>
+    </form>
+    <p class="text-center m-2">__________________________________________________</p>
+</div>
+
+<div class="text-center p-4 m-3">
+    <form class="comment-form">
+        <div>
+            <textarea name="comment-body" style="height: 10em; width: 35em;" placeholder="Comments:"></textarea>
+        </div>
+
+        <div>
+            <button class="btn btn-info" type="submit">Add comment</button>
+        </div>
+    </form>
+    <p class="text-center m-2">__________________________________________________</p>
+</div>
+
+<div class="p-3 m-2">
+    <h2 class="text-center">Comments:</h2>
+    <div class="row m-3 border border-info rounded p-3">
+        {{> comments post.comments}}
+    </div>
+</div>
+
+<script src="/js/edit-post.js"></script>
+<script src="/js/delete-post.js"></script>
+<script src="/js/comment.js"></script>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!--load dayjs if used   -->
+    {{!--
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script> --}}
+    {{!--
+    <link rel="stylesheet" href="/stylesheets/style.css"> --}}
+    <title>Tech-Blog-MVC</title>
+
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid">
+            <h1 class="text-center p-3">
+                Tech-Blog-MVC
+            </h1>
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/">Home &nbsp |</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/dashboard">Dashboard &nbsp |</a>
+                            </li>
+                            {{#if loggedIn}}
+                            <li class="nav-item">
+                                <a class="nav-link" id="logout" href="/">Logout</a>
+                            </li>
+                            {{else}}
+                            <li class="nav-item">
+                                <a class="nav-link" href="/login">Login</a>
+                            </li>
+                            {{/if}}
+                        </ul>
+                    </div>
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+        {{{ body }}}
+    </main>
+
+    {{!-- <footer class="text-center">
+        blog on!
+    </footer> --}}
+
+    {{#if loggedIn}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<div class="text-center p-4 mb-4">
+    <div class="row">
+        <div class="column p-3">
+            <h2>About Me</h2>
+            {{> user-info}}
+            <p class="text-center m-7">__________________________________________________</p>
+        </div>
+        <div class="column">
+            <h2>Create New Post</h2>
+            <div class="p-3">
+                <form class="new-post-form">
+                    <div class="m-4 p-3">
+                        <input type="text" id="post-title" name="post-title" style="height: 2em; width: 30em;"
+                            placeholder="Title:" />
+                    </div>
+                    <div>
+                        <textarea id="post-text" name="post-text" style="height: 10em; width: 35em;"
+                            placeholder="Text:"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Create</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <p class="text-center m-7">__________________________________________________</p>
+</div>
+
+
+{{#if posts.length}}
+<div class="p-3 m-2">
+    <h2 class="text-center">Your Posts</h2>
+    {{#each posts as |post|}}
+    <div class="row m-3 border border-info rounded p-3">
+        {{> post-info post}}
+        <a href="/dashboard/edit/{{post.id}}" class="btn btn-warning edit-link">Edit post</a>
+    </div>
+    {{/each}}
+</div>
+{{/if}}
+
+<script src="/js/add-post.js"></script>
