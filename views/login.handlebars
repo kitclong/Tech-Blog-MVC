@@ -1,17 +1,15 @@
-<form class="login-form">
-    <div>
-        <label for="email-login">email:</label>
-        <input type="text" id="email-login" />
+<form class="login-form text-center m-4 p-3">
+    <h2>Login</h2>
+    <div class="m-4">
+        <input type="text" id="email-login" placeholder="Email:" />
+    </div>
+    <div class="mb-4">
+        <input type="password" id="password-login" placeholder="Password:" />
     </div>
     <div>
-        <label for="password-login">password:</label>
-        <input type="password" id="password-login" />
-    </div>
-    <div>
-        <button type="submit">login</button>
+        <button class="btn btn-primary mb-4" type="submit">Login</button><br>
+        <a class="btn btn-warning" href="/signup">Sign up Page?</a>
     </div>
 </form>
-
-<a href="/signup">need to sign up instead?</a>
 
 <script src="/js/login.js"></script>
