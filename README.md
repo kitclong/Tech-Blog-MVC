@@ -20,7 +20,6 @@ The purpose of this educational assignment was to practice the MVC (model/view/c
 User can create/write a tech blog, post, publish, and comment with others.
 
 Install:
-* npm init
 * npm install
 make sure all are installed: (bcrypt, dotenv, express, handlebars, mysql2, sequelize)
 
